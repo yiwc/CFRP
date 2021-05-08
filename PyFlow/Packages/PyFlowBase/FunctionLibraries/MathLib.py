@@ -36,7 +36,8 @@ class MathLib(FunctionLibraryBase):
     # ###################
     @staticmethod
     @IMPLEMENT_NODE(returns=("AnyPin", 0, {PinSpecifires.CONSTRAINT: "1", PinSpecifires.SUPPORTED_DATA_TYPES: ["FloatPin", "IntPin"]}), meta={NodeMeta.CATEGORY: 'Python|math|Number-theoretic and representation functions', NodeMeta.KEYWORDS: []})
-    def copysign(x=("AnyPin", 0, {PinSpecifires.CONSTRAINT: "1", PinSpecifires.SUPPORTED_DATA_TYPES: ["FloatPin", "IntPin"]}), y=("AnyPin", 0, {PinSpecifires.CONSTRAINT: "1", PinSpecifires.SUPPORTED_DATA_TYPES: ["FloatPin", "IntPin"]})):
+    def copysign(x=("AnyPin", 0, {PinSpecifires.CONSTRAINT: "1", PinSpecifires.SUPPORTED_DATA_TYPES: ["FloatPin", "IntPin"]}),
+                 y=("AnyPin", 0, {PinSpecifires.CONSTRAINT: "1", PinSpecifires.SUPPORTED_DATA_TYPES: ["FloatPin", "IntPin"]})):
         '''Return `x` with the sign of `y`. On a platform that supports signed zeros, `copysign(1.0, -0.0)` returns `-1.0`.'''
         return math.copysign(x, y)
 
