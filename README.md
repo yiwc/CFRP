@@ -21,3 +21,12 @@ YOLO
 ## Actions
 
 ...
+
+## For Developer
+
+All of our modification should located in 
+
+```angular2html
+PyFlow / Packages / CFRP
+```
+

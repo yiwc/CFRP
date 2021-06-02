@@ -61,16 +61,21 @@ class ActionLibrary(FunctionLibraryBase):
 
     @staticmethod
     @IMPLEMENT_NODE(returns=('AnyPin', None, PIN_ALLOWS_ANYTHING.copy()), meta={NodeMeta.CATEGORY: 'ActionLibrary-L1', NodeMeta.KEYWORDS: []})
-    def Pick(robot=("AnyPin","Robot", PIN_ALLOWS_ANYTHING.copy())
+    def Pick(robot=("AnyPin","Robot", PIN_ALLOWS_ANYTHING.copy()),
+             execute=('ExecPin', "Execute")
                      ):
         '''Returns attribute from object using "getattr(name)"'''
+        print("Do Pick")
         return True
 
 
     @staticmethod
     @IMPLEMENT_NODE(returns=('AnyPin', None, PIN_ALLOWS_ANYTHING.copy()), meta={NodeMeta.CATEGORY: 'ActionLibrary-L1', NodeMeta.KEYWORDS: []})
-    def Place(robot=("AnyPin","Robot", PIN_ALLOWS_ANYTHING.copy())
+    def Place(robot=("AnyPin","Robot", PIN_ALLOWS_ANYTHING.copy()),
+              execute=('ExecPin', "Execute")
                      ):
+
+        print("Do Place")
         '''Returns attribute from object using "getattr(name)"'''
         return True
 
