@@ -8,6 +8,7 @@ class TurtleBot(Robot):
     def __init__(self, name):
         super(TurtleBot, self).__init__(name)
         self.name = "TurtleBot"
+        self.obj.setData("TurtleBot")
 
     @staticmethod
     def keywords():

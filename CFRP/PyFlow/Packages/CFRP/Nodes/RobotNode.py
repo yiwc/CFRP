@@ -7,8 +7,8 @@ class Robot(NodeBase):
         super(Robot, self).__init__(name)
         self.inp = self.createInputPin('Activate', 'ExecPin')
         self.out = self.createOutputPin('Execute', 'ExecPin')
-        self.obj = self.createOutputPin('obj',"AnyPin")
-
+        # self.obj = self.createOutputPin('obj',"AnyPin")
+        self.obj = self.createOutputPin('obj',"StringPin")
 
     @staticmethod
     def pinTypeHints():

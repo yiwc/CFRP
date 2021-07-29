@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Task_Planner</class>
+ <widget class="QWidget" name="Task_Planner">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>770</width>
+    <height>765</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Task_Planner</string>
+  </property>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>60</y>
+     <width>256</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>L0_dual_jp_move_safe_relate</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L0_dual_set_gripper</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L0_dual_task_move_safe_relate</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L0_single_set_gripper</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L0_single_task_move_safe</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L0_upper_jp_move_safe</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_dual_flip_case_V1_hardcode</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_dual_mate_case_V1_hardcode</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_dual_pick_case_V1_hardcode</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_insert_bolt_V1_hardcode</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_insert_bolt_V2_BIPA</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_mate_case_V2_birdview</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_pick_bolt_V1_hardcode</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_pick_case_V2_birdview</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_screw_V1_hardcode</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_screw_V2_BIPA</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1_single_task_move_relate</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L2_rightarm_insert_leftarm_screw</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L3_pick_matecase_pickbolt_insert_screw</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string/>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>20</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Action Library</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>410</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>User Defined Action</string>
+   </property>
+  </widget>
+  <widget class="QListView" name="listView">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>460</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Task Planner</string>
+   </property>
+  </widget>
+  <widget class="QListView" name="listView_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>256</width>
+     <height>341</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>430</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color: rgb(225, 225, 225);border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;}&quot;
+                                           &quot;QPushButton:hover{background-color:rgb(229, 241, 251); color: black;}&quot;
+                                           &quot;QPushButton:pressed{background-color:rgb(204, 228, 247);border-style: inset;}
+</string>
+   </property>
+   <property name="text">
+    <string>Delete Task</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>490</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color: rgb(225, 225, 225);border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;}&quot;
+                                           &quot;QPushButton:hover{background-color:rgb(229, 241, 251); color: black;}&quot;
+                                           &quot;QPushButton:pressed{background-color:rgb(204, 228, 247);border-style: inset;}
+</string>
+   </property>
+   <property name="text">
+    <string>Save as Action</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>550</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color: rgb(225, 225, 225);border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;}&quot;
+                                           &quot;QPushButton:hover{background-color:rgb(229, 241, 251); color: black;}&quot;
+                                           &quot;QPushButton:pressed{background-color:rgb(204, 228, 247);border-style: inset;}
+</string>
+   </property>
+   <property name="text">
+    <string>Emergency Stop</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>610</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color: rgb(225, 225, 225);border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;}&quot;
+                                           &quot;QPushButton:hover{background-color:rgb(229, 241, 251); color: black;}&quot;
+                                           &quot;QPushButton:pressed{background-color:rgb(204, 228, 247);border-style: inset;}
+</string>
+   </property>
+   <property name="text">
+    <string>Execute</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>670</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{background-color: rgb(225, 225, 225);border:2px groove gray;border-radius:10px;padding:2px 4px;border-style: outset;}&quot;
+                                           &quot;QPushButton:hover{background-color:rgb(229, 241, 251); color: black;}&quot;
+                                           &quot;QPushButton:pressed{background-color:rgb(204, 228, 247);border-style: inset;}
+</string>
+   </property>
+   <property name="text">
+    <string>Add to Task Planner</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

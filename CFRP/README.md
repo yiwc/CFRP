@@ -42,3 +42,15 @@ git push origin newfeature_name
 ```
 
 Then Yiwen will merge this feature branch to the main branch.
+
+
+
+## Update
+
+Guo Sheng has create a New repo for this project
+
+How to run the integrated GUI+CFRP?
+
+cd GUI_CFRP/GUI_CFRP/CFRP/Junjie_Reapper_Demo/
+
+run main_window.py
