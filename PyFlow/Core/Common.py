@@ -762,6 +762,7 @@ class PinOptions(Flag):
 
     ArraySupported = auto()  #: Pin can hold array data structure
     DictSupported = auto()  #: Pin can hold dict data structure
+    TensorSupported = auto()  #test:tensor
     SupportsOnlyArrays = auto()  #: Pin will only support other pins with array data structure
 
     AllowMultipleConnections = auto()  #: This enables pin to allow more that one input connection. See :func:`~PyFlow.Core.Common.connectPins`

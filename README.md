@@ -1,5 +1,15 @@
 # Computational Flow-based Robotics Programming
 
+## Developing Process
+
+1. git clone
+2. ....working on your code ....
+3. git checkout -b resnet18
+4. git add .
+5. git commit -m "resnet 18 node finished."
+6. git push origin resnet18 
+   git push (X这么不要做)
+
 CFRP(v1.a1) Current version is built upon PyFlow.
 
 ## Robots
