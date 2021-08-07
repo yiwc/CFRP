@@ -16,6 +16,7 @@ _NODES = {}
 from PyFlow.Packages.CFRP.FunctionLibraries.DemoLib import DemoLib
 from PyFlow.Packages.CFRP.FunctionLibraries.ActionLibrary import ActionLibrary
 # from PyFlow.Packages.CFRP.FunctionLibraries.ProcControl import ProcControl
+from PyFlow.Packages.CFRP.Nodes.DeepLearningLib import DeepLearningLib
 
 # Class based nodes
 from PyFlow.Packages.CFRP.Nodes.DemoNode import DemoNode
@@ -49,6 +50,7 @@ _EXPORTERS = OrderedDict()
 
 _FOO_LIBS[DemoLib.__name__] = DemoLib(PACKAGE_NAME)
 _FOO_LIBS[ActionLibrary.__name__] = ActionLibrary(PACKAGE_NAME)
+_FOO_LIBS[DeepLearningLib.__name__] = DeepLearningLib(PACKAGE_NAME)
 
 # _NODES[DemoNode.__name__] = DemoNode
 # _PINS[DemoPin.__name__] = DemoPin
