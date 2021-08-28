@@ -35,6 +35,8 @@ from PyFlow.Packages.CFRP.Nodes.Model_YOLO_Detection import YOLO_Detection
 _NODES[YOLO_Detection.__name__] = YOLO_Detection
 from PyFlow.Packages.CFRP.Nodes.Model_PointCloudClassfication import PointCloudClassfication
 _NODES[PointCloudClassfication.__name__] = PointCloudClassfication
+from PyFlow.Packages.CFRP.Nodes.Model_resnet18 import resnet18
+_NODES[resnet18.__name__] = resnet18
 from PyFlow.Packages.CFRP.Nodes.ProcControl_SeqExecute import SeqExecute
 _NODES[SeqExecute.__name__] = SeqExecute
 

@@ -21,10 +21,10 @@ class DeepLearningLib(FunctionLibraryBase):
     @IMPLEMENT_NODE(returns=('StringPin', ''),
                     meta={NodeMeta.CATEGORY: 'DeepLearningLib',
                           NodeMeta.KEYWORDS: []})
-    def makeURL(URL=('StringPin', '')):
-        '''Make URL(string).'''
-        print("URL set to -> {}".format(URL))
-        return URL
+    def makeString(str=('StringPin', '')):
+        '''Make string.'''
+        print("String set to -> {}".format(str))
+        return str
     #refer from makestring
 
     @staticmethod
@@ -48,8 +48,8 @@ class DeepLearningLib(FunctionLibraryBase):
     def resnet18(img_tensor=("AnyPin", None, PIN_ALLOWS_ANYTHING.copy())):
         '''import tensor to resnet18'''
         # tensor = img_tensor.strip('"')
-        input = torch.unsqueeze(img_tensor, dim=0)  # 增加1个维度
+        in_tensor = torch.unsqueeze(img_tensor, dim=0)  # 增加1个维度
         resnet18 = models.resnet18()  # 调用
-        output = resnet18(input)
-        print('resnet18_output', output)
-        return output
+        out_tensor = resnet18(in_tensor)
+        print('resnet18_output', out_tensor)
+        return out_tensor

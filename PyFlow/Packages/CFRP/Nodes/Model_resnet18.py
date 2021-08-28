@@ -1,16 +1,18 @@
 from PyFlow.Core import NodeBase
 from PyFlow.Core.NodeBase import NodePinsSuggestionsHelper
 from PyFlow.Core.Common import *
-# import os
-from PyFlow.Packages.CFRP.Nodes.YOLO_BIPA.BS3_yolo_client import *
+
+import torchvision.transforms as transforms
+import torchvision.models as models
+import torch
+from PIL import Image   # (R, G, B)
 
 
-class YOLO_Detection(NodeBase):
+class resnet18(NodeBase):
     def __init__(self, name):
-        super(YOLO_Detection, self).__init__(name)
+        super(resnet18, self).__init__(name)
         self.inExec = self.createInputPin('Activate', 'ExecPin', None, self.compute)
         self.address = self.createInputPin('address', 'StringPin', structure=StructureType.Single)
-        # self.sudo = self.createInputPin('sudo', 'StringPin', structure=StructureType.Single)
         # self.address.enableOptions(PinOptions.AllowAny)
 
         self.obj = self.createOutputPin('object', "AnyPin", structure=StructureType.Multi)
@@ -18,12 +20,6 @@ class YOLO_Detection(NodeBase):
         self.out = self.createOutputPin('output', 'AnyPin', structure=StructureType.Multi)
         self.out.enableOptions(PinOptions.AllowAny)
         # self.outExec = self.createOutputPin(DEFAULT_OUT_EXEC_NAME, 'ExecPin')
-
-        # passcode = self.sudo.getData()
-        global a
-        a = YOLO_CLIENT()
-        # os.popen("sudo -S %s" % ('docker run --rm -p 8000:8081 yolo-v2'), 'w').write(passcode)
-        # os.popen("sudo -S %s" % ('docker run --rm -p 8000:8081 yolo-v2'), 'w').write('123456')
 
     @staticmethod
     def pinTypeHints():
@@ -46,17 +42,18 @@ class YOLO_Detection(NodeBase):
 
     @staticmethod
     def description():
-        return "Model_YOLO_Detection"
+        return "Model_resnet18"
 
     def compute(self, *args, **kwargs):
-        img = np.random.randint(0, 255, [128, 128, 3]).astype(np.uint8)
-        import cv2
-        url = self.address.getData()
-        img = cv2.imread(url)
-        img = cv2.resize(img, (128, 128))
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        result = a.gen(img)
-        print(result)
-
-        self.out.setData(result)
-        return result
+        image = Image.open(self.address.getData())  # 打开文件夹中图片,URL
+        print('(W，H) = ', image.size, type(image.size))  # (W，H)
+        tran = transforms.ToTensor()  # 调用
+        img_tensor = tran(image)  # 将PIL.Image读的图片转换成(C,H,W)的Tensor格式且/255归一化到[0,1.0]之间
+        print('(C，H, W) = ', img_tensor.size(), type(img_tensor.size()))  # (C，H, W), 通道顺序（R,G,B)
+        print('归一化\t', img_tensor, '\ntype:', type(img_tensor))  # 通道顺序（R,G,B)，/255归一化到[0,1.0]之间
+        in_tensor = torch.unsqueeze(img_tensor, dim=0)  # 增加1个维度
+        resnet18 = models.resnet18()  # 调用
+        out_tensor = resnet18(in_tensor)
+        print('resnet18_output\t', out_tensor, '\ntype:', type(out_tensor))
+        self.out.setData(out_tensor)
+        return out_tensor
