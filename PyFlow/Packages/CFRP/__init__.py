@@ -2,6 +2,10 @@ PACKAGE_NAME = 'CFRP'
 # Factories
 
 
+# Factories
+from PyFlow.Packages.PyFlowBase.Factories.UIPinFactory import createUIPin
+from PyFlow.Packages.PyFlowBase.Factories.PinInputWidgetFactory import getInputWidget
+from PyFlow.Packages.PyFlowBase.Factories.UINodeFactory import createUINode
 
 
 from collections import OrderedDict
@@ -23,6 +27,9 @@ from PyFlow.Packages.CFRP.Nodes.DemoNode import DemoNode
 
 from PyFlow.Packages.CFRP.Nodes.MOVO import MOVO
 _NODES[MOVO.__name__] = MOVO
+from PyFlow.Packages.CFRP.Nodes.ProcessObj import ProcessObj, AnObject
+_NODES[ProcessObj.__name__] = ProcessObj
+_NODES[AnObject.__name__] = AnObject
 from PyFlow.Packages.CFRP.Nodes.IIWA import IIWA
 _NODES[IIWA.__name__] = IIWA
 from PyFlow.Packages.CFRP.Nodes.TurtleBot import TurtleBot
@@ -83,3 +90,18 @@ class CFRP(IPackage):
 	def GetToolClasses():
 		return _TOOLS
 
+	@staticmethod
+	def UIPinsFactory():
+		return createUIPin
+
+	@staticmethod
+	def UINodesFactory():
+		return createUINode
+
+	@staticmethod
+	def PinsInputWidgetFactory():
+		return getInputWidget
+
+	@staticmethod
+	def PrefsWidgets():
+		return _PREFS_WIDGETS

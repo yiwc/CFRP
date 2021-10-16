@@ -287,6 +287,9 @@ def getInputWidget(dataType, dataSetter, defaultValue, widgetVariant=DEFAULT_WID
         if pkgName == PACKAGE_NAME:
             continue
 
+        if pkgName == "CFRP":
+            continue
+
         try:
             widget = pkg.PinsInputWidgetFactory()(dataType, dataSetter, defaultValue, widgetVariant=widgetVariant, **kwds)
             if widget is not None:

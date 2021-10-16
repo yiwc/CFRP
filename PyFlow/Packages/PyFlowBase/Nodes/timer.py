@@ -58,6 +58,7 @@ class timer(NodeBase):
         self.accum = 0.0
 
     def start(self, *args, **kwargs):
+        print("start")
         self.accum = 0.0
         self.bWorking = True
 

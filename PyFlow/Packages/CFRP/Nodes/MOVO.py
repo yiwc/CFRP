@@ -9,6 +9,9 @@ class MOVO(Robot):
         self.name = "MOVO"
 
 
+    def set_name(self,name):
+        self.name=name
+
     @staticmethod
     def keywords():
         return []

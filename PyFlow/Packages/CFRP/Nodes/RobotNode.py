@@ -5,10 +5,11 @@ from PyFlow.Core.Common import *
 class Robot(NodeBase):
     def __init__(self, name):
         super(Robot, self).__init__(name)
-        self.inp = self.createInputPin('Activate', 'ExecPin')
+        self.inp = self.createInputPin('Activate', 'ExecPin',None, self.compute)
         self.out = self.createOutputPin('Execute', 'ExecPin')
         self.obj = self.createOutputPin('obj',"AnyPin")
 
+        self.obj.setData(self)
 
     @staticmethod
     def pinTypeHints():
@@ -32,6 +33,7 @@ class Robot(NodeBase):
         return "Description in rst format."
 
     def compute(self, *args, **kwargs):
-        inputData = self.inp.getData()
-        self.out.call()
+        print("robot compute...")
+        # inputData = self.inp.getData()
+        # self.out.call()
         self.obj.setData(self)
